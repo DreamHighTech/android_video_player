@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tenistik.rendering.RenderActivity">
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_play"
+        android:layout_gravity="bottom"
+        android:onClick="onPlay"
+        android:text="Play"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_stop"
+        android:layout_gravity="top"
+        android:onClick="onStop"
+        android:text="Stop"
+        android:visibility="visible"
+        android:layout_marginTop="50dp" />
+
+    <SurfaceView
+        android:id="@+id/render_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

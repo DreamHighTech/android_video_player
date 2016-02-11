@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.tenistik.rendering.VideoActivity" >
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/gl_surface_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <SeekBar
+                android:id="@+id/seekBarThumb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1.0"
+                android:max="1000"
+                android:maxHeight="4dp"
+                android:minHeight="3dip"
+                android:paddingLeft="65dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="0dp"
+                android:progressDrawable="@drawable/makalu_progress_transparent"
+                android:thumb="@drawable/thumb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <ToggleButton
+                android:id="@+id/playpausebtn"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@drawable/playstop_status"
+                android:checked="true"
+                android:clickable="true"
+                android:enabled="true"
+                android:gravity="bottom"
+                android:text="play"
+                android:textOff=""
+                android:textOn="" />
+
+            <SeekBar
+                android:id="@+id/seekBarFrame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:max="1000"
+                android:maxHeight="3dp"
+                android:minHeight="3dip"
+                android:paddingLeft="15dip"
+                android:paddingRight="30dip"
+                android:progressDrawable="@drawable/makalu_progress"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
